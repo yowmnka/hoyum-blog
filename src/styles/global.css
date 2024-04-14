@@ -1,0 +1,49 @@
+/* zen-kaku-gothic-new-regular - japanese */
+@font-face {
+  font-display: swap;
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/zen-kaku-gothic-new-v15-japanese-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hina-mincho-regular - japanese */
+@font-face {
+  font-display: swap;
+  font-family: 'Hina Mincho';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/hina-mincho-v12-japanese-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  background-color: #f1f1f1;
+  font-family: 'Zen Kaku Gothic New';
+}
+
+.content {
+  padding: 5em 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50em;
+}
+
+.text {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em 5em;
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}

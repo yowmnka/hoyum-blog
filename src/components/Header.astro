@@ -1,0 +1,55 @@
+---
+---
+
+<header id="header">
+  <h1 class="logo"><a href="/">ほゆむのひとりごと</a></h1>
+</header>
+
+<style>
+  header{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    transition: width 0.3s;
+  }
+
+  .logo{
+      text-align: center;
+      margin-right: 0;
+      font-family: "Hina Mincho";
+  }
+  @media screen and (min-width: 636px) {
+    .logo {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 1200px){
+    .logo {
+      text-align: left;
+      margin-left: 15%;
+    }
+  }
+
+  a{
+    color: rgb(33, 235, 208);
+    text-decoration: none;
+  }
+  a:hover{
+
+  }
+</style>
+
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction(){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("header").style.width = "1%"; /* スクロールされたら左へ移動 */
+    } else {
+      document.getElementById("header").style.width = "100%"; /* スクロールがトップに戻ったら元の位置に戻す */
+    }
+  }
+</script>
