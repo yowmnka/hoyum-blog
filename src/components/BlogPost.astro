@@ -1,9 +1,15 @@
 ---
-const { title, url, imgSrc, imgAlt } = Astro.props;
+const { title, url, description, pubDate, tags } = Astro.props;
 ---
 <div class="post-thumbnail">
-  <img src={imgSrc} width="100%" alt={imgAlt}>
-  <br>
-  <a href={url}>{title}</a>
-  <br>
+  <h3><a class="title" href={url}>{title}</a></h3>
+  <div class="info">
+    <div class="tags">
+      {tags.map((tag) => (
+        <p class="tag">#<a href={`/tags/${tag}`}>{tag}</a></p>
+      ))}
+    </div>
+    <p class="pubDate">{pubDate}</p>
+  </div>
+  <p class="description">{description}</p>
 </div>

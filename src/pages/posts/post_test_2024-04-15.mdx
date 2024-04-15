@@ -2,29 +2,32 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'レイアウトを確認するために作った意味不明な記事です。'
 pubDate: '2022.07.01'
-image:
-    url: '../images/NCG290.jpg'
-    alt: 'The full Astro logo.'
+description: 'タイトルの通り。'
 tags: ["astro", "blogging"]
 ---
+import {Image} from 'astro:assets';
+import ncg290Img from './images_test_2024-04-15/NCG290.jpg';
+import ncg282Img from './images_test_2024-04-15/NCG282.jpg';
+
 ## まえおき
 何も書くことがありません。
-![NCG290](../images/NCG290.jpg)
+<Image src={ncg290Img} width="300" alt="NCG290" />
 
 
 ## 何が言いたいのかって？何が言いたいんだろう...
-少なくとも、これはダミーテキストだってことは分かる。  
+少なくとも、これはダミーテキストだってことは分かる。
 
 「ではみなさんは、そういうふうに川だと言われたり、乳の流れたあとだと言われたりしていた、このぼんやりと白いものがほんとうは何かご承知ですか」  
 先生は、黒板につるした大きな黒い星座の図の、上から下へ白くけぶった銀河帯のようなところを指しながら、みんなに問いをかけました。  
 カムパネルラが手をあげました。  
+<Image src={ncg282Img} width="300" alt="NCG282" />
 それから四、五人手をあげました。  
 ジョバンニも手をあげようとして、急いでそのままやめました。
 
 ## 次だ！次、次！
 
 Neeeeext!!!
-<br><br><br><br><br><br>
+
 ...は無いです。
 
 _～fin～_

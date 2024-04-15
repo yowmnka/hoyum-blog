@@ -169,11 +169,54 @@ p {
 
 /* 記事一覧 */
 .blog-list{
-  display: flex;
-  text-align: center;
 }
 
 .post-thumbnail{
-  width: 50%;
-  margin: 0.5em;
+  margin-top: 3em;
+  border-left: 2px solid #555555;
+  padding-left: 0.5em;
+}
+.post-thumbnail .info{
+  display: flex;
+}
+.post-thumbnail h3{
+  font-family: "Hina Mincho";
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+.post-thumbnail .title{
+  text-decoration: none;
+  color: #555555;
+}
+.post-thumbnail .title:hover{
+  color: #f1f1f1;
+  background-color: #555555;
+}
+.post-thumbnail p{
+  margin: 0;
+}
+.post-thumbnail .pubDate{
+  font-family: "Hina Mincho";
+  font-size: 0.8em;
+  margin-left: auto;
+}
+.post-thumbnail .description{
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  color: #555555;
+  margin: 0.25em;
+  padding: 0 0.1em;
+  font-size: 0.8em;
+}
+.tag a {
+  color: #555555;
 }
