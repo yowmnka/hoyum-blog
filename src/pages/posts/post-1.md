@@ -1,45 +1,24 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: '雑誌みたいなレイアウトの個人ブログ（Webサイト）を作った話'
 pubDate: '2022.07.01'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-## My First Blog Post
+## まえおき
+突然ですが、おしゃれなWebサイトって...いいですよね。どうせ個人ブログのサイトを作るならってことで、頑張りました。
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+## 何が言いたいのかって？何が言いたいんだろう...
+少なくとも、これはダミーテキストだってことは分かる。  
 
-## What I've accomplished
+「ではみなさんは、そういうふうに川だと言われたり、乳の流れたあとだと言われたりしていた、このぼんやりと白いものがほんとうは何かご承知ですか」  
+先生は、黒板につるした大きな黒い星座の図の、上から下へ白くけぶった銀河帯のようなところを指しながら、みんなに問いをかけました。  
+カムパネルラが手をあげました。  
+それから四、五人手をあげました。  
+ジョバンニも手をあげようとして、急いでそのままやめました。
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+## 次だ！次、次！
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
-
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。
-これはテキストです。これはテキストです。これはテキストです。これはテキストです。
+かっふかふにする魔法。花譜ちゃんkawaiiね！！！

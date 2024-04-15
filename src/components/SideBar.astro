@@ -1,70 +1,28 @@
 ---
+import Navigation from "./Navigation.astro";
 ---
 <div class="side-bar">
-  <div class="side-content">
-    <input type="checkbox" id="toggle">
-    <label for="toggle" class="close-btn"><span></span></label>
-
-    <nav id="hidden">
-      <ul>
-        <li><a href="#sec1">Section1</a></li>
-        <li><a href="#sec2">Section2</a></li>
-        <li><a href="#sec3">Section3</a></li>
-      </ul>
-    </nav>
+  <div class="hamburger">
+    <span class="line ham1"></span>
+    <span class="line ham2"></span>
+    <span class="line ham3"></span>
   </div>
+
+  <nav id="hidden">
+    <ul>
+      <Navigation />
+    </ul>
+    <div class="side-line"></div>
+  </nav>
 </div>
 
-<style>
-  .side-bar{
-    position: fixed;
-    z-index: 9999;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    visibility: hidden;
-  }
-  @media screen and (min-width: 1200px) {
-    nav{
-      width: 400px;
-    }
-  }
-
-  #toggle{
-    /* display: none; */
-  }
-  #toggle:checked ~ #hidden{
-    visibility: visible;
-  }
-
-  #toggle:checked ~ .close-btn::before{
-    content: "";
-    position: fixed;
-
-    /*top,left,bottom,right全て0にすることで全画面表示*/
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    /*背景色に少し透過させた黒*/
-    background: #000;
-    opacity: 0.3;
-
-    /*header要素の後ろに*/
-    z-index: -1;
-  }
-
-  .close-btn{
-    cursor: pointer;
-    z-index: 1;
-    height: 20px;
-    width: 30px;
-    background-color: #995858;
-  }
-</style>
+<script>
+  document.querySelector('.side-bar .hamburger').addEventListener('click', function() {
+    document.querySelector('.side-bar nav').classList.toggle('active');
+    document.querySelector('.side-bar nav ul').classList.toggle('active');
+    document.querySelector('.side-bar nav .side-line').classList.toggle('active');
+    document.querySelector('.side-bar .hamburger .ham1').classList.toggle('active');
+    document.querySelector('.side-bar .hamburger .ham2').classList.toggle('active');
+    document.querySelector('.side-bar .hamburger .ham3').classList.toggle('active');
+  });
+</script>

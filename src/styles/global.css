@@ -16,8 +16,11 @@
   src: url('../fonts/hina-mincho-v12-japanese-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+
 html {
-  background-color: #f1f1f1;
+  scroll-behavior: smooth;
+  background: #f1f1f1 url(../img/noise.png) center;
+  color: #555555;
   font-family: 'Zen Kaku Gothic New';
 }
 
@@ -32,7 +35,8 @@ html {
   margin: 0 auto;
   width: 100%;
   padding: 1em 5em;
-  line-height: 1;
+  line-height: 1.3em;
+  font-size: 1em;
 }
 
 * {
@@ -40,10 +44,121 @@ html {
 }
 
 h1 {
+  font-family: "Hina Mincho";
+  text-align: center;
   margin: 0;
   font-size: 3em;
+  line-height: 1em;
+}
+.h1-title {
+  font-size: 2em;
+  border-top: 2px solid #555555;
+  border-bottom: 2px solid #555555;
+  padding: 0.4em 0;
 }
 
 h2 {
+  border-left: 2px solid #555555;
+  font-family: "Hina Mincho";
   font-size: 2em;
+  line-height: 1em;
+  margin-top: 2em;
+  padding-left: 0.5em;
+}
+
+p {
+  letter-spacing: 0.05em;
+}
+
+
+/* サイドバー */
+.side-bar{
+  position: fixed;
+  z-index: 999;
+}
+
+/* サイドバーのコンテンツ */
+.side-bar nav {
+  display: flex;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: #f1f1f1 url(../img/noise.png) center;
+
+  transition: width 0.3s;
+}
+.side-bar nav.active{
+  width: 320px;
+}
+.side-bar nav ul{
+  visibility: hidden;
+  width: 150px;
+  margin-left:4em;
+  margin-top: 6em;
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 0.2s;
+  transition-duration: 0.3s;
+}
+.side-bar nav ul.active{
+  visibility: visible;
+  opacity: 1;
+}
+.side-bar nav li{
+  font-family: "Hina Mincho";
+  list-style: none;
+  margin-bottom: 1em;
+}
+.side-bar nav li a{
+  text-decoration: none;
+  color: #555555;
+  transition: color 0.2s;
+}
+.side-bar nav li a:hover{
+  color: #f1f1f1;
+}
+
+.side-bar nav .side-line{
+  background-color: #555555;
+  width: 2px;
+  height: 97%;
+  margin-left: 5em;
+  margin-top: 3%;
+  opacity: 0;
+}
+.side-bar nav .side-line.active{
+  opacity: 1;
+}
+
+/* ハンバーガーメニューのボタン */
+.side-bar .hamburger{
+  margin-top: 1.7em;
+  margin-left: 1.3em;
+  cursor: pointer;
+  z-index: 1;
+  height: 20px;
+  width: 30px;
+}
+.side-bar .hamburger .line{
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #555555;
+
+  transition: transform 0.5s;
+}
+.side-bar .hamburger .ham1.active{
+  transform: translateY(7px) rotateZ(45deg);
+}
+.side-bar .hamburger .ham2.active{
+  transform: translateX(-2px) rotateZ(-45deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.side-bar .hamburger .ham3.active{
+  transform: translateY(-7px) rotateZ(-225deg);
 }

@@ -1,0 +1,60 @@
+---
+import {Image} from 'astro:assets';
+import localIconImage from '../img/icon.png';
+---
+<div class="profile">
+  <div class="icon">
+    <Image class="icon-img" src={localIconImage} alt="アイコン" width="50" height="50" />
+    <div class="arrow">
+      <span class="arrow1"></span>
+      <span class="arrow2"></span>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .profile{
+    position: fixed;
+    right: 0;
+    margin: 6em 1em;
+  }
+  .icon-img{
+    transition: transform 0.3s;
+  }
+  .icon-img:hover{
+    transform: scale(108%);
+    top:-3px;
+    filter: drop-shadow(0 3px 2px rgba(0,0,0,0.5));
+  }
+
+  .profile .icon .arrow:hover{
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+    transform: translateY(20px);
+  }
+  .profile .icon .arrow1{
+    z-index: -1;
+    background-color: #555555;
+    width: 1px;
+    height: 12px;
+
+    position: absolute;
+    top: 60%;
+    right: 80%;
+    transform: rotate(-45deg);
+  }
+  .profile .icon .arrow2{
+    z-index: -1;
+    background-color: #555555;
+    width: 1px;
+    height: 12px;
+
+    position: absolute;
+    top: calc(60% - 9px);
+    right: 80%;
+    transform: rotate(45deg);
+  }
+</style>
