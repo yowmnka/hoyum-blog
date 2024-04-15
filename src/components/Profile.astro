@@ -1,60 +1,108 @@
 ---
 import {Image} from 'astro:assets';
-import localIconImage from '../img/icon.png';
+import iconImage from '../img/icon.png';
+import logoX from '../img/logo_X.png';
 ---
 <div class="profile">
-  <div class="icon">
-    <Image class="icon-img" src={localIconImage} alt="アイコン" width="50" height="50" />
-    <div class="arrow">
-      <span class="arrow1"></span>
-      <span class="arrow2"></span>
+  <div class="profile-content">
+    <div class="icon">
+      <Image class="icon-img" src={iconImage} alt="アイコン" width="50" height="50" />
+      <a href="https://twitter.com/hoyum_tt" target="_blank" rel="noopener noreferrer"><Image class="logo-X-img" src={logoX} alt="X" width="30" height="30"/></a>
     </div>
   </div>
+  <div></div><!-- 消したら崩れるヨ -->
 </div>
 
+<div id="profile-hidden">
+  <p class="bold">ほゆむ</p>
+  <p class="id">hoyum_tt</p>
+  <p class="t">興味のあることについて記事を書いています。</p>
+  <a href="/about/">このサイトについて</a>
+  <a href="">YouTube</a>
+</div>
 
 <style>
   .profile{
     position: fixed;
     right: 0;
-    margin: 6em 1em;
+    margin: 6em 1.5em;
   }
-  .icon-img{
+  .profile .icon-img{
+    cursor: pointer;
+    right: 0;
     transition: transform 0.3s;
   }
-  .icon-img:hover{
+  .profile .icon-img:hover{
     transform: scale(108%);
     top:-3px;
     filter: drop-shadow(0 3px 2px rgba(0,0,0,0.5));
   }
+  .profile .logo-X-img{
+    cursor: pointer;
+    right: 0;
+    margin-top: 1.5em;
+    margin-left: 0.5em;
+    transition: transform 0.3s;
+  }
+  .profile .logo-X-img:hover{
+    transform: scale(108%);
+    top:-3px;
+  }
 
-  .profile .icon .arrow:hover{
-    z-index: 1;
+  .profile .profile-content{
+    right: 0;
     width: 50px;
     height: 50px;
-    transition: transform 0.3s;
-    transform: translateY(20px);
+    transition: width 0.5s;
+    transition: height 0.2s ease-out;
+    border-radius: 25px;
+    background: #ffffff url(../img/noise.png) center;
   }
-  .profile .icon .arrow1{
-    z-index: -1;
-    background-color: #555555;
-    width: 1px;
-    height: 12px;
-
-    position: absolute;
-    top: 60%;
-    right: 80%;
-    transform: rotate(-45deg);
+  .profile .profile-content.active{
+    width: 250px;
+    height: 300px;
   }
-  .profile .icon .arrow2{
-    z-index: -1;
-    background-color: #555555;
-    width: 1px;
-    height: 12px;
+  .profile .icon{
+    right: 0;
+    width: 0;
+  }
+  .profile .icon.active{
+    margin-left: 200px
+  }
 
-    position: absolute;
-    top: calc(60% - 9px);
-    right: 80%;
-    transform: rotate(45deg);
+  #profile-hidden{
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    margin: 8.5em 3em;
+    width: 200px;
+    text-align: center;
+  }
+  #profile-hidden.active{
+    visibility: visible;
+  }
+
+  #profile-hidden .bold{
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  #profile-hidden .id,.bold{
+    font-family: "Hina Mincho";
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #profile-hidden .t{
+    margin-top: 3.5em;
+  }
+  #profile-hidden p{
+    line-height: 1em;
   }
 </style>
+
+<script>
+  document.querySelector('.profile .icon .icon-img').addEventListener('click', function() {
+    document.querySelector('.profile .profile-content').classList.toggle('active');
+    document.querySelector('#profile-hidden').classList.toggle('active');
+    document.querySelector('.profile .icon').classList.toggle('active');
+  });
+</script>

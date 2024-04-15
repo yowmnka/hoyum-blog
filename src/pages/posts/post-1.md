@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: '雑誌みたいなレイアウトの個人ブログ（Webサイト）を作った話'
+title: 'レイアウトを確認するために作った意味不明な記事です。'
 pubDate: '2022.07.01'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["astro", "blogging"]
 ---
 ## まえおき
-突然ですが、おしゃれなWebサイトって...いいですよね。どうせ個人ブログのサイトを作るならってことで、頑張りました。
+何も書くことがありません。
 
 ## 何が言いたいのかって？何が言いたいんだろう...
 少なくとも、これはダミーテキストだってことは分かる。  
@@ -21,4 +21,8 @@ tags: ["astro", "blogging", "learning in public"]
 
 ## 次だ！次、次！
 
-かっふかふにする魔法。花譜ちゃんkawaiiね！！！
+Neeeeext!!!
+<br><br><br><br><br><br>
+...は無いです。
+
+_～fin～_

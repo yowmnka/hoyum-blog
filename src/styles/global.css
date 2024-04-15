@@ -109,6 +109,8 @@ p {
 }
 .side-bar nav li{
   font-family: "Hina Mincho";
+  font-weight: 600;
+  letter-spacing: 0.1em;
   list-style: none;
   margin-bottom: 1em;
 }
