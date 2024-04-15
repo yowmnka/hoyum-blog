@@ -71,15 +71,16 @@ import logoX from '../img/logo_X.png';
   }
 
   #profile-hidden{
-    visibility: hidden;
     position: fixed;
     right: 0;
     margin: 8.5em 3em;
     width: 200px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
   #profile-hidden.active{
-    visibility: visible;
+    opacity: 1;
   }
 
   #profile-hidden .bold{
