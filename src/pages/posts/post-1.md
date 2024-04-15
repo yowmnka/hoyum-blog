@@ -3,12 +3,14 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: 'レイアウトを確認するために作った意味不明な記事です。'
 pubDate: '2022.07.01'
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    url: '../images/NCG290.jpg'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging"]
 ---
 ## まえおき
 何も書くことがありません。
+![NCG290](../images/NCG290.jpg)
+
 
 ## 何が言いたいのかって？何が言いたいんだろう...
 少なくとも、これはダミーテキストだってことは分かる。  

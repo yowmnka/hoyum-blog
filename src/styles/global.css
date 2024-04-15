@@ -164,3 +164,16 @@ p {
 .side-bar .hamburger .ham3.active{
   transform: translateY(-7px) rotateZ(-225deg);
 }
+
+
+
+/* 記事一覧 */
+.blog-list{
+  display: flex;
+  text-align: center;
+}
+
+.post-thumbnail{
+  width: 50%;
+  margin: 0.5em;
+}
